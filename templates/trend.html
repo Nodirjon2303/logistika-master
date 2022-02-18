@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+    <div class="container" id="product-list">
+            <div class="row h1-text">
+                <h1>ecomhunt is a curation of the best new products, every day.</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                </div>
+            </div>
+
+
+
+            <div class="row row-eq-height" style="display: block">
+                {% for i in data %}
+                <div class="col-md-6 product-col">
+
+                    <div class="product-cont" id="product-3745">
+                        <div class="product-photo col-sm-4 col-md-5">
+                            <a href="#">
+                                <img class="media-object"
+                                    src="{{ i.img }}"
+                                    alt="NON-SLIP multifunctional phone pad for car">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h4 class="media-heading">
+                               {{ i.title }}</h4>
+                            <span class="available-info">
+                                <h6>Available info:</h6>
+                               <p>{{ i.text }}</p>
+                            </span>
+                            <div class="btn_section">
+                                <a href="#" class="btn btn-success btn-block">
+                                    SHOW ME THE MONEY!
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+
+
+
+
+
+
+        </div>
+        <!-- <div class="jumbotron" id="guest-jumbotron">
+            <div class="container text-center">
+                <h2>
+                    We are manually adding winning products on a daily basis.
+                    <br>
+                    Stop wasting money on bad products
+                </h2>
+                <p>
+                    Wanna be a successful store owner? Subscribe now and get access to our full winning products list
+                    with a kickass detailed analytics.
+                </p>
+                <a href="https://ecomhunt.com/register" class="btn btn-success btn-lg signup-btn">Join now! It's Free
+                    :)</a>
+            </div>
+        </div> -->
+        <div class="modal fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback-modal-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="loading-overlay vertical-center" v-if="loading">
+                    <div class="sk-spinner">
+                        <div class="sk-double-bounce1"></div>
+                        <div class="sk-double-bounce2"></div>
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="feedback-modal-label">Have some feedback?</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success" v-if="success"><b>Thank you for valuable feedback!</b></div>
+                    <div class="alert alert-danger" v-if="server_error"><b>Server error:</b> {{ server_error }}</div>
+                    <form action="https://ecomhunt.com/feedback" method="POST" class="text-center"
+                        v-on:submit.prevent="send($event)" v-if="!success">
+                        <p class="text-center">We'd love to hear your thoughts :)</p>
+                        <div class="form-group" v-bind:class="{'has-error': subject_error}">
+                            <input type="text" class="form-control" v-model="subject" placeholder="Broken Links"
+                                value="Broken Links" readonly>
+                            <span class="help-block" v-if="subject_error">{{ subject_error }}</span>
+                        </div>
+                        <div class="form-group" v-bind:class="{'has-error': feedback_error}">
+                            <textarea class="form-control" v-model="feedback" placeholder="Feedback"></textarea>
+                            <span class="help-block" v-if="feedback_error">{{ feedback_error }}</span>
+                        </div>
+                        <div class="form-group" v-bind:class="{'has-error': email_error}">
+                            <input type="text" class="form-control" v-model="email" placeholder="Your email">
+                            <span class="help-block" v-if="email_error">{{ email_error }}</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="eabb2bdf4945f24682d632ef-text/javascript">
+window.ECOM_PRODUCTS = {
+	saved_products: JSON.parse('[]'),
+	export_products: JSON.parse('[]'),
+};
+</script>
+    <script src="https://ecomhunt.com/js/manifest.d41d8cd98f00b204e980.js"
+        type="eabb2bdf4945f24682d632ef-text/javascript"></script>
+    <script src="https://ecomhunt.com/js/vendor.61cf71d79fb215c9b184.js"
+        type="eabb2bdf4945f24682d632ef-text/javascript"></script>
+    <script src="https://ecomhunt.com/js/app.f89c293ec64d98591e9d.js"
+        type="eabb2bdf4945f24682d632ef-text/javascript"></script>
+
+    <input type="hidden" id="tm_uid" value="guest" />
+    <input type="hidden" id="tm_uemail" value="" />
+    <input type="hidden" id="tm_uplan" value="" />
+    <div style="display:none;">CURRENT SITE VERSION 4.2</div>
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="eabb2bdf4945f24682d632ef-|49" defer=""></script>
+    <script
+        type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6d7a787b2959376e', m: 'yRSgtfXgG.FygRKIJCkN4Jv1YN_FY6CYFTIB5q1dqaQ-1643878846-0-Ac0OZXebkZZI0iyS+1vJ7iqB4kwZVkOhxoQXLptElBjuaE+8HMRx35yHxnp/wi7cZBT2iXIGgH4ZGVnESaQGugFVkvo9cxElJhi1Hra0pOAaEN0MoSbryhMZ/N78cLShLxpWHhUTdM0iIVN/r8/9VvGWAS3r5t8+b4Rh6exPS4eKUEQzEumkk0X2z4ndQ6xjyoacAej7OxgsO4SpkE/DepL0qSbZYjZyc04pb7WHWR3JF519mkUkwH9v4dHkBLxdJpr3Vhc+lU6I7GJEYaRg+HmyBpt0dKVO41HgZzHL9JFdJBlQSW2CMw5WN0cdLulh0W9Lps/1S1FNaes1/lrTTe7qZlfzx6ADF7+9PyQJqDIAqC0/azb/iyBogj6W9PNINjjr6VimN27snEBhXQcjRNccDkJJ07EC56H3gFnJYl7DEwVxUmxx520nDWMgiZD3sLCvR5WoXG45iMrAA57dDU4=', s: [0xf4eb34a970, 0x2b30fe4077], } })();</script>
+
+
+{% endblock %}
