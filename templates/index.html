@@ -491,25 +491,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div id="2div" hidden>
-                                                            <style>
-                                                                table {
-                                                                    border-collapse: collapse !important;
-                                                                    border-spacing: 0 !important;
-                                                                    padding: 0 !important;
-                                                                    width: 90% !important;
-                                                                }
-                                                                tr,
-                                                                th,
-                                                                td {
-                                                                    padding: 0;
-                                                                }
-                                                                tr:hover {
-                                                                    background-color: coral !important;
-                                                                }
-                                                            </style>
-                                                            <table id="tr" style=" display: inline-block !important; ">
-                                                            </table>
+                                                        <div id="2div">
+
                                                         </div>
                                                         <div id="3div" hidden>
                                                             <div><b>
@@ -570,7 +553,7 @@
                                                                 if (country != "" && weight != "") {
                                                                     weight_data()
                                                                     document.getElementById("1div").hidden = !document.getElementById("1div").hidden;
-                                                                    document.getElementById("2div").hidden = !document.getElementById("2div").hidden;
+                                                                    {#document.getElementById("2div").hidden = !document.getElementById("2div").hidden;#}
                                                                 }
                                                                 else {
                                                                     document.getElementById("text12").innerHTML = `<b style="color:red" >  Sizda qaysidir bo'lim to'ldirilmagan please</b>`
@@ -583,7 +566,8 @@
                                                         </div>
                                                         <script>
                                                             function d2(name, price) {
-                                                                document.getElementById("2div").hidden = !document.getElementById("2div").hidden;
+                                                                {#document.getElementById("2div").hidden = !document.getElementById("2div").hidden;#}
+                                                                document.getElementById('2div').innerHTML = ''
                                                                 document.getElementById("3div").hidden = !document.getElementById("3div").hidden;
                                                                 document.getElementById("saqla").innerHTML = `<p id="company_name">Courier:  "${name}"</p>
                                                                                                                 <div id="company_price">Rate:  ${price} $</div>
@@ -619,7 +603,7 @@
                                                                             for (var i = 0; i < data.length; i++) {
                                                                                 html += `
                                                                                     <tr >
-                                                                                        <td style="width:18% !important;"><img src="${data[i].logo}" alt="HTML5 Icon" ></td>
+                                                                                        <td style="width:20px; height: 20px !important;"><img src="${data[i].logo}" alt="Company logo" ></td>
                                                                                         <td style="width:18% !important;">${data[i].name} </td>
                                                                                         <td style="width:18% !important;">${data[i].type}</td>
                                                                                         <td style="width:18% !important;">${data[i].time}</td>
@@ -628,7 +612,26 @@
                                                                                                         <button style="padding:0 !important;min-width: auto !important;  border: 1px solid black !important;  background-color: red; !important;" onclick='d2("${data[i].name}", ${data[i].price})' >${data[i].price} $</button> </div>
                                                                                                         </td> </tr>`
                                                                             }
-                                                                            document.getElementById('tr').innerHTML = html
+                                                                            html2 = `<style>
+                                                                table {
+                                                                    border-collapse: collapse !important;
+                                                                    border-spacing: 0 !important;
+                                                                    padding: 0 !important;
+                                                                    width: 90% !important;
+                                                                }
+                                                                tr,
+                                                                th,
+                                                                td {
+                                                                    padding: 0;
+                                                                }
+                                                                tr:hover {
+                                                                    background-color: coral !important;
+                                                                }
+                                                            </style>
+                                                            <table id="tr" style=" display: inline-block !important; ">
+                                                            `
+                                                                            html2+=html
+                                                                            document.getElementById('2div').innerHTML = html2
                                                                             //
                                                                         })
                                                                     })
