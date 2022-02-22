@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
-
-
+{% load static %}
     <div class="container" id="product-list">
             <div class="row h1-text">
                 <h1>ecomhunt is a curation of the best new products, every day.</h1>
@@ -28,10 +26,10 @@
                         </div>
                         <div class="product-info">
                             <h4 class="media-heading">
-                               {{ i.title }}</h4>
+                            {{ i.title }}</h4>
                             <span class="available-info">
                                 <h6>Available info:</h6>
-                               <p>{{ i.text }}</p>
+                            <p>{{ i.text }}</p>
                             </span>
                             <div class="btn_section">
                                 <a href="#" class="btn btn-success btn-block">
@@ -129,4 +127,36 @@ window.ECOM_PRODUCTS = {
         type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6d7a787b2959376e', m: 'yRSgtfXgG.FygRKIJCkN4Jv1YN_FY6CYFTIB5q1dqaQ-1643878846-0-Ac0OZXebkZZI0iyS+1vJ7iqB4kwZVkOhxoQXLptElBjuaE+8HMRx35yHxnp/wi7cZBT2iXIGgH4ZGVnESaQGugFVkvo9cxElJhi1Hra0pOAaEN0MoSbryhMZ/N78cLShLxpWHhUTdM0iIVN/r8/9VvGWAS3r5t8+b4Rh6exPS4eKUEQzEumkk0X2z4ndQ6xjyoacAej7OxgsO4SpkE/DepL0qSbZYjZyc04pb7WHWR3JF519mkUkwH9v4dHkBLxdJpr3Vhc+lU6I7GJEYaRg+HmyBpt0dKVO41HgZzHL9JFdJBlQSW2CMw5WN0cdLulh0W9Lps/1S1FNaes1/lrTTe7qZlfzx6ADF7+9PyQJqDIAqC0/azb/iyBogj6W9PNINjjr6VimN27snEBhXQcjRNccDkJJ07EC56H3gFnJYl7DEwVxUmxx520nDWMgiZD3sLCvR5WoXG45iMrAA57dDU4=', s: [0xf4eb34a970, 0x2b30fe4077], } })();</script>
 
 
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <div class="card_img">
+                        <img src="{% static 'img/1.jpg' %}" alt="">
+                    </div>
+                    <div class="card_body">
+                        <p>Give us a description, quantity of item desired, product number, and total price including
+                            shipping to our warehouse. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_img">
+                        <img src="{% static 'img/2.jpg' %}" alt="">
+                    </div>
+                    <div class="card_body">
+                        <p>If the information and prices align with the information provided within your Shopping Assistance
+                            Purchase request, the order will be placed</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_img">
+                        <img src="{% static 'img/3.jpg' %}" alt="">
+                    </div>
+                    <div class="card_body">
+                        <p>
+                            We will notify you when we receive your order. We will inspect the items to ensure the order is
+                            correct and nothing was damaged in transit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 {% endblock %}

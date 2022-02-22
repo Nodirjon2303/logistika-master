@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
 {% load static %}
+
 <head>
     <!-- META TAGS -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=8">
     <!-- LINK TAGS -->
     <link rel="pingback" href="https://takeandship.com/xmlrpc.php" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/trend.css' %}">
     <!-- This site is optimized with the Yoast SEO plugin v18.0 - https://yoast.com/wordpress/plugins/seo/ -->
     <title>Rate Calculator - Discounted Shipping Cost Calculator - Worldel and Ship</title>
     <meta name="description"
@@ -35,11 +37,10 @@
     <link rel='dns-prefetch' href='//www.google.com' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel="alternate" type="application/rss+xml" title="Worldel and Ship &raquo; Feed"
-        href="#" />
+    <link rel="alternate" type="application/rss+xml" title="Worldel and Ship &raquo; Feed" href="#" />
     <link rel="alternate" type="application/rss+xml" title="Take and Ship &raquo; Comments Feed"
         href="https://takeandship.com/comments/feed/" />
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script type="text/javascript">
         window._wpemojiSettings = {
             "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/",
@@ -67,9 +68,9 @@
                 t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
             }
             for (o = Array("flag", "emoji"), t.supports = {
-                    everything: !0,
-                    everythingExceptFlag: !0
-                }, r = 0; r < o.length; r++) t.supports[o[r]] = function (e) {
+                everything: !0,
+                everythingExceptFlag: !0
+            }, r = 0; r < o.length; r++) t.supports[o[r]] = function (e) {
                 if (!p || !p.fillText) return !1;
                 switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
                     case "flag":
@@ -93,9 +94,9 @@
                     t.readyCallback()
                 }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load",
                     n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () {
-                    "complete" === a.readyState && t.readyCallback()
-                })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji),
-                    c(n.wpemoji)))
+                        "complete" === a.readyState && t.readyCallback()
+                    })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji),
+                        c(n.wpemoji)))
         }(window, document, window._wpemojiSettings);
     </script>
     <link rel='stylesheet' id='wp-block-library-css'
@@ -123,7 +124,7 @@
         id='jquery-migrate-js'></script>
     <script type='text/javascript'
         src='//maps.google.com/maps/api/js?key=AIzaSyBX9sZrFMq4A3RZNwISSBsiEjIjZe-Hdjo&#038;ver=5.9' id='gmap-js'>
-    </script>
+        </script>
     <script type='text/javascript' src='https://takeandship.com/wp-content/themes/globax/js/modernizr.js?ver=5.9'
         id='modernizr-js'></script>
     <link rel="https://api.w.org/" href="https://takeandship.com/wp-json/" />
@@ -177,7 +178,7 @@
             k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode
                 .insertBefore(k, a)
         })
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(84076330, "init", {
             clickmap: true,
@@ -246,77 +247,44 @@
     class="page-template-default page page-id-14034 wp-embed-responsive enovathemes preloader-active custom-scroll-false layout-wide sidebar-align-right button-size-medium  blank-false wpb-js-composer js-comp-ver-6.8.0 vc_responsive">
     <!-- general wrap start -->
     {% load static %}
-<script src="{% static 'js/main.js' %}"></script>
-<script>
-    function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== '') {
-            const cookies = document.cookie.split(';');
-            for (let i = 0; i < cookies.length; i++) {
-                const cookie = cookies[i].trim();
-                // Does this cookie string begin with the name we want?
-                if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                    break;
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
                 }
             }
+            return cookieValue;
         }
-        return cookieValue;
-    }
-
-    const csrftoken = getCookie('csrftoken');
-</script>
-
-
-
-
+        const csrftoken = getCookie('csrftoken');
+    </script>
     <div id="gen-wrap">
-
-
         <div class="mobile-navigation" data-color="#424242">
             <div class="mob-menu-toggle-alt"></div>
-
-
-
-
-
             <nav class="mob-menu et-clearfix">
                 <ul id="mob-header-menu" class="menu">
                     <li id="menu-item-10619"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-10619">
                         <a title="Homepage" href="{% url 'calculator' %}"><span class="mi"></span><span
-                                class="txt">Home</span><span class="mi fa fa-angle-down"></span></a></li>
+                                class="txt">HOME</span><span class="mi fa fa-angle-down"></span></a>
+                    </li>
                     <li id="menu-item-14118"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14118"><a
-                            href="{% url 'trend' %}"><span class="mi"></span><span class="txt">TREND PRODUCTS</span><span class="mi fa fa-angle-down"></span></a></li>
-                    <li id="menu-item-10625"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10625"><a
-                            href="#"><span class="mi"></span><span
-                                class="txt">Services</span><span class="mi fa fa-angle-down"></span></a></li>
-                    <li id="menu-item-14174"
-                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14034 current_page_item menu-item-14174">
-                        <a href="{% url 'calculator' %}" aria-current="page"><span
-                                class="mi"></span><span class="txt">Rate Calculator</span><span
-                                class="mi fa fa-angle-down"></span></a></li>
-                    <li id="menu-item-14817"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14817"><a
-                            href="#"><span class="mi"></span><span
-                                class="txt">Shopping sites</span><span class="mi fa fa-angle-down"></span></a></li>
-                    <li id="menu-item-14777"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14777"><a
-                            href="#"><span class="mi"></span><span
-                                class="txt">Exchange rates</span><span class="mi fa fa-angle-down"></span></a></li>
+                            href="{% url 'trend' %}"><span class="mi"></span><span class="txt">TREND
+                                PRODUCTS</span><span class="mi fa fa-angle-down"></span></a></li>
                 </ul>
             </nav>
-
         </div>
-
-
-
-
         <!-- wrap start -->
         <div id="wrap" data-navigation="default" data-sidebar-pos="left">
-
             <header
                 class="header-mobile one-page-side top-false sidebar-false top-sl-false transparent-false no-logo-false">
                 <div class="header-content">
@@ -324,7 +292,7 @@
                         <div class="header-logo-area">
                             <div class="container">
                                 <div class="logo logo-desk">
-                              <a href="{% url 'calculator' %}" title="wordel.uz">
+                                    <a href="{% url 'calculator' %}" title="wordel.uz">
                                         wordel.uz
                                     </a>
                                 </div>
@@ -335,7 +303,6 @@
                 </div>
             </header>
             <div class="overlay"></div>
-
             <header data-stickyheight="90"
                 class="header desk one-page-side slider-inactive no-logo-false border-box-false transparent-false boxed-false sticky-true full-false logopos-left menupos-left menu-under-logo-false menu-under-logo-boxed-false menu-under-logo-icons-false header-under-slider-false top-false sidebar-false top-sl-false search-false social-links-false cart-true language-false effect-underline subeffect-ghost subeffect-hover-fill">
                 <div class="header-content">
@@ -355,55 +322,28 @@
                             <div class="logo logo-desk">
                                 <a href="{% url 'calculator' %}" title="Take and Ship">
                                     <p style="font-size: 25px;">WORLDEL</p>
-
                                 </a>
                             </div>
-
-
-
                             <nav class="header-menu desk-menu et-clearfix">
                                 <ul id="header-menu" class="menu">
                                     <li id="menu-item-10619"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"
                                         data-mm="false" data-mmc="1" data-mmw="grid-aligned"><a title="Homepage"
-                                            href="{% url 'calculator' %}"><span class="txt">Home</span><span
+                                            href="{% url 'calculator' %}"><span class="txt">HOME</span><span
                                                 class="mi fa fa-angle-down"></span></a></li>
-                                    <li id="menu-item-14118"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page" data-mm="false"
-                                        data-mmc="1" data-mmw="grid-aligned"><a
-                                            href="#"><span class="txt"> SHOPPING ASISTEANCE </span><span class="mi fa fa-angle-down"></span></a></li>
                                     <li id="menu-item-10625"
                                         class="menu-item menu-item-type-post_type menu-item-object-page" data-mm="false"
-                                        data-mmc="1" data-mmw="grid-aligned"><a
-                                            href="{% url 'trend' %}"><span
-                                                class="txt">TREND PRODUCTS </span><span class="mi fa fa-angle-down"></span></a>
+                                        data-mmc="1" data-mmw="grid-aligned"><a href="{% url 'trend' %}"><span
+                                                class="txt">TREND PRODUCTS </span><span
+                                                class="mi fa fa-angle-down"></span></a>
                                     </li>
-                                    <li id="menu-item-14174"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-14034 current_page_item"
-                                        data-mm="false" data-mmc="1" data-mmw="grid-aligned"><a
-                                            href="#"><span class="txt">RATE CALCULATOR </span><span class="mi fa fa-angle-down"></span></a></li>
-                                    <li id="menu-item-14817"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page" data-mm="false"
-                                        data-mmc="1" data-mmw="grid-aligned"><a
-                                            href="#"><span
-                                                class="txt">TERMS</span><span
-                                                class="mi fa fa-angle-down"></span></a></li>
-                                    <li id="menu-item-14777"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page" data-mm="false"
-                                        data-mmc="1" data-mmw="grid-aligned"><a
-                                            href="#"><span class="txt"></span><span class="mi fa fa-angle-down"></span></a></li>
                                 </ul>
                             </nav>
-
-
-
-
                         </div>
                     </div>
                 </div>
             </header>
             <div class="page-content-wrap sticky-status-true">
-
 
 {% block content %}
 
@@ -413,8 +353,7 @@
 
 
 
-
-                  <footer data-sticky="false" class="footer et-clearfix">
+<footer data-sticky="false" class="footer et-clearfix">
                     <section class="vc_section vc_custom_1532087629320 vc_section-has-fill">
                         <div
                             class="vc_row wpb_row vc_row-fluid vc_column-gap-24 vc-container vc_row-o-content-middle vc_row-flex">
@@ -440,15 +379,11 @@
                                                 #et-social-links-1 a:hover {
                                                     color: #ffffff;
                                                 }
-                                            </style><a class="et-icon-facebook"
-                                                href="#" target="_blank"></a><a
-                                                class="et-icon-instagram" href="#"
-                                                target="_blank"></a><a class="et-icon-twitter"
-                                                href="#" target="_blank"></a><a
-                                                class="et-icon-linkedin"
-                                                href="#"
-                                                target="_blank"></a><a class="et-icon-pinterest"
-                                                href="#" target="_blank"></a>
+                                            </style><a class="et-icon-facebook" href="#" target="_blank"></a><a
+                                                class="et-icon-instagram" href="#" target="_blank"></a><a
+                                                class="et-icon-twitter" href="#" target="_blank"></a><a
+                                                class="et-icon-linkedin" href="#" target="_blank"></a><a
+                                                class="et-icon-pinterest" href="#" target="_blank"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -485,8 +420,7 @@
                                                         target="_self" href="#">
                                                         <div class="image">
                                                             <div class="image-container"><img width="240" height="70"
-                                                                    src="#"
-                                                                    alt="WORLDEL.UZ"></div>
+                                                                    src="#" alt="WORLDEL.UZ"></div>
                                                             <div class="post-image-overlay"><a data-modal="false"
                                                                     title="WORLDEL & UZ" target="_self"
                                                                     class="overlay-read-more single-image-link"
@@ -501,9 +435,7 @@
                                                         Resat Dayi Cad. No: 39/A Bayrampasa / Istanbul</p>
                                                 </div>
                                             </div>
-                                            <a target="_blank"
-                                                href="#"
-                                                id="et-button-1"
+                                            <a target="_blank" href="#" id="et-button-1"
                                                 style="color:#bdbdbd;font-size:12px !important;font-weight:700 !important;letter-spacing:0.5px !important;"
                                                 class="et-button   icon-position-left modal-false small hover-fill false click-none"
                                                 data-color="#bdbdbd" data-colorhover="#212121"><span
@@ -522,27 +454,6 @@
                                             <div class="wpb_widgetised_column wpb_content_element">
                                                 <div class="wpb_wrapper">
                                                     <div id="text-1" class="widget widget_text">
-                                                        <div class="widget-body">
-                                                            <h5 class="widget_title">WORLDEL UZ</h5>
-                                                            <div class="textwidget">
-                                                                <ul>
-                                                                    <li><a href="#">About
-                                                                            Us</a></li>
-                                                                    <li><a
-                                                                            href="#">How
-                                                                            it works?</a></li>
-                                                                    <li><a
-                                                                            href="#">Terms
-                                                                            and Conditions</a></li>
-                                                                    <li><a
-                                                                            href="#">Privacy
-                                                                            Policy</a></li>
-                                                                    <li><a
-                                                                            href="#">Login
-                                                                            / Sign Up</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -556,28 +467,6 @@
                                             <div class="wpb_widgetised_column wpb_content_element">
                                                 <div class="wpb_wrapper">
                                                     <div id="text-3" class="widget widget_text">
-                                                        <div class="widget-body">
-                                                            <h5 class="widget_title">TOOLS</h5>
-                                                            <div class="textwidget">
-                                                                <ul>
-                                                                    <li><a
-                                                                            href="{% url 'calculator' %}">Rate
-                                                                            Calculator</a></li>
-                                                                    <li><a
-                                                                            href="{% url 'trend' %}">Online
-                                                                            Shopping Sites</a></li>
-                                                                    <li><a
-                                                                            href="#">Value
-                                                                            Added Services</a></li>
-                                                                    <li><a
-                                                                            href="#">Shopping
-                                                                            Assistance</a></li>
-                                                                    <li><a
-                                                                            href="#">Import
-                                                                            From Turkey</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -591,26 +480,6 @@
                                             <div class="wpb_widgetised_column wpb_content_element">
                                                 <div class="wpb_wrapper">
                                                     <div id="text-2" class="widget widget_text">
-                                                        <div class="widget-body">
-                                                            <h5 class="widget_title">Help</h5>
-                                                            <div class="textwidget">
-                                                                <ul>
-                                                                    <li><a href="#">FAQ</a>
-                                                                    </li>
-                                                                    <li><a
-                                                                            href="#">Prohibited
-                                                                            Items</a></li>
-                                                                    <li><a
-                                                                            href="#">What
-                                                                            is Take&Ship?</a></li>
-                                                                    <li><a href="#">Contact
-                                                                            Us</a></li>
-                                                                    <li><a href="#"
-                                                                            target="_blank" rel="" >Bize
-                                                                            Ulaşn</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -653,7 +522,6 @@
                                 <div class="vc_column-inner ">
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
-
                                         </div>
                                     </div>
                                 </div>
@@ -835,7 +703,7 @@
                                                 <p style="text-align: center;"><span id="siteseal">
                                                         <script async type="text/javascript"
                                                             src="https://seal.godaddy.com/getSeal?sealID=83ebYGMXJbQ1oJKVCOH6e1cSvXexOHm0KP3CvPzTYRmxTSyGOfdNvDmuEELQ">
-                                                        </script>
+                                                            </script>
                                                     </span></p>
                                             </div>
                                         </div>
@@ -865,8 +733,6 @@
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
                                                 <div id="ETBIS" style="text-align: center;">
-
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -874,7 +740,7 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
                 </footer>
             </div>
         </div>
@@ -883,28 +749,20 @@
     <a id="to-top" href="#wrap"></a>
     <!-- general wrap end -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
         <div class="pswp__bg"></div>
-
         <div class="pswp__scroll-wrap">
-
             <div class="pswp__container">
                 <div class="pswp__item"></div>
                 <div class="pswp__item"></div>
                 <div class="pswp__item"></div>
             </div>
-
             <div class="pswp__ui pswp__ui--hidden">
-
                 <div class="pswp__top-bar">
-
                     <div class="pswp__counter"></div>
-
                     <span class="pswp__button pswp__button--close" title=""></span>
                     <span class="pswp__button pswp__button--share" title=""></span>
                     <span class="pswp__button pswp__button--fs" title=""></span>
                     <span class="pswp__button pswp__button--zoom" title=""></span>
-
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                             <div class="pswp__preloader__cut">
@@ -912,27 +770,19 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
                     <div class="pswp__share-tooltip"></div>
                 </div>
-
                 <span class="pswp__button pswp__button--arrow--left" title="">
                 </span>
-
                 <span class="pswp__button pswp__button--arrow--right" title="">
                 </span>
-
                 <div class="pswp__caption">
                     <div class="pswp__caption__center"></div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
     <script type="text/javascript">
         window.RS_MODULES = window.RS_MODULES || {};
@@ -951,7 +801,7 @@
         id='regenerator-runtime-js'></script>
     <script type='text/javascript'
         src='https://takeandship.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'>
-    </script>
+        </script>
     <script type='text/javascript' id='contact-form-7-js-extra'>
         var wpcf7 = {
             "api": {
@@ -1021,7 +871,7 @@
     </script>
     <script type='text/javascript'
         src='https://takeandship.com/wp-content/themes/globax/js/controller-combined.js?ver=5.9' id='controller-js'>
-    </script>
+        </script>
     <script type='text/javascript'
         src='https://www.google.com/recaptcha/api.js?render=6LetWTQbAAAAAJdiDhJt8-2KF0hrClA0Pi_6cQ3H&#038;ver=3.0'
         id='google-recaptcha-js'></script>
@@ -1050,20 +900,19 @@
                 "; path=/; secure; SameSite=Lax";
         }());
     </script>
-<script>
-        function send_data_all(){
-            fname=document.getElementById('fname').value
-            lname=document.getElementById('lname').value
-            phone=document.getElementById('phone').value
-            email=document.getElementById('email').value
-            message=document.getElementById('message').value
+    <script>
+        function send_data_all() {
+            fname = document.getElementById('fname').value
+            lname = document.getElementById('lname').value
+            phone = document.getElementById('phone').value
+            email = document.getElementById('email').value
+            message = document.getElementById('message').value
             country = document.getElementById(`country_id1`).value
-            length=document.getElementById(`length`).value
-            width=document.getElementById(`width`).value
-            height=document.getElementById(`height`).value
-            company_name=document.getElementById("company_name").innerHTML
-            company_price=document.getElementById("company_price").innerHTML
-
+            length = document.getElementById(`length`).value
+            width = document.getElementById(`width`).value
+            height = document.getElementById(`height`).value
+            company_name = document.getElementById("company_name").innerHTML
+            company_price = document.getElementById("company_price").innerHTML
             var url = `saqlash/`
             fetch(url, {
                 method: 'POST',
@@ -1072,44 +921,36 @@
                     'X-CSRFToken': csrftoken,
                 },
                 body: JSON.stringify({
-                    'fname':fname,
-                    'lname':lname,
-                    'phone':phone,
-                    'email':email,
-                    'message':message,
-                    'country':country,
-                    'length':length,
-                    'width':width,
-                    'height':height,
-                    'weight' :higher_weight,
-                    'company_name':company_name,
-                    'company_price':company_price,
+                    'fname': fname,
+                    'lname': lname,
+                    'phone': phone,
+                    'email': email,
+                    'message': message,
+                    'country': country,
+                    'length': length,
+                    'width': width,
+                    'height': height,
+                    'weight': higher_weight,
+                    'company_name': company_name,
+                    'company_price': company_price,
                 })
             })
                 .then((response) => {
                     response.json().then((data) => {
                         data = data['data']
-                    })})
-            document.getElementById('saqla2').innerHTML=`
+                    })
+                })
+            document.getElementById('saqla2').innerHTML = `
             <p>Name:      ${fname} ${lname}</p>
-            <p>phone:     ${ phone }</p>
+            <p>phone:     ${phone}</p>
             <p>email:     ${email}</p>
-            <p>weight:    ${ weight }</p>
+            <p>weight:    ${weight}</p>
             <p>country:   ${country}<p>
             <p>${company_name}</p>
             <p>${company_price}</p>
-
-
-
-
             `
-
-                }
+        }
     </script>
-
-
-
-
 </body>
 
 </html>
