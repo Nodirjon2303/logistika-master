@@ -63,18 +63,16 @@ function weight_data() {
 
 
 function sherzamon() {
-    country = document.getElementById(`country_id1`).value
-    weight = document.getElementById(`weight`).value
-    if (country != "" && weight != "") {
-        weight_data()
-        document.getElementById("1div").hidden = !document.getElementById("1div").hidden;
-        {
-            // document.getElementById("2div").hidden = !document.getElementById("2div").hidden;
+        country = document.getElementById(`country_id1`).value
+        weight = document.getElementById(`weight`).value
+        if (country != "" && weight != "") {
+            weight_data()
+            document.getElementById("1div").hidden = !document.getElementById("1div").hidden;
+            // {#document.getElementById("2div").hidden = !document.getElementById("2div").hidden;#}
+        } else {
+            document.getElementById("text12").innerHTML = `<b style="color:red" >  Sizda qaysidir bo'lim to'ldirilmagan please</b>`
         }
-    } else {
-        document.getElementById("text12").innerHTML = `<b style="color:red" >  Sizda qaysidir bo'lim to'ldirilmagan please</b>`
     }
-}
 
 
 function share_all_data() {
