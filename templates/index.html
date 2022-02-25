@@ -603,22 +603,18 @@
                                                                             for (var i = 0; i < data.length; i++) {
                                                                                 html += `
                                                                                     <tr >
-                                                                                        <td style="width:20px; height: 20px !important;"><img src="${data[i].logo}" alt="Company logo" ></td>
-                                                                                        <td style="width:18% !important;">${data[i].name} </td>
+                                                                                        <td style="width:30px; height: 40px !important;"><img src="${data[i].logo}" alt="Company logo" ></td>
+                                                                                        <td><button  style="width:12% !important;" onclick='d2("${data[i].name}")'>${data[i].name}</button></td>
                                                                                         <td style="width:18% !important;">${data[i].type}</td>
                                                                                         <td style="width:18% !important;">${data[i].time}</td>
-                                                                                        <td style="width:18% !important;">
-                                                                                                <div >
-                                                                                                        <button style="padding:0 !important;min-width: auto !important;  border: 1px solid black !important;  background-color: red; !important;" onclick='d2("${data[i].name}", ${data[i].price})' >${data[i].price} $</button> </div>
-                                                                                                        </td> </tr>`
+                                                                                        <td style="width:18% !important;"></td>${data[i].price} $</tr>`
                                                                             }
-                                                                            html2 = `<style>
-                                                                table {
+                                                                            html2 = `
+                                                            <table id="tr" style=" display: inline-block !important;
                                                                     border-collapse: collapse !important;
                                                                     border-spacing: 0 !important;
                                                                     padding: 0 !important;
                                                                     width: 90% !important;
-                                                                }
                                                                 tr,
                                                                 th,
                                                                 td {
@@ -626,9 +622,7 @@
                                                                 }
                                                                 tr:hover {
                                                                     background-color: coral !important;
-                                                                }
-                                                            </style>
-                                                            <table id="tr" style=" display: inline-block !important; ">
+                                                                } ">
                                                             `
                                                                             html2+=html
                                                                             document.getElementById('2div').innerHTML = html2
