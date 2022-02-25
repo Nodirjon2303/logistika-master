@@ -54,7 +54,7 @@ def CompanySendFunc(request):
                 koeffisent=index.index
                 narx=i.kg05*koeffisent
                 a ={'name':i.company_name,
-                    'time':i.days,'price':narx,
+                    'time':i.days,'price':int(narx),
                     'logo': i.company_logo.url,
                     'type': i.company_type,
                     }
@@ -66,7 +66,7 @@ def CompanySendFunc(request):
                 koeffisent=index.index
                 narx=i.kg1*koeffisent
 
-                a ={'name':i.company_name,'time':i.days,'price':narx,
+                a ={'name':i.company_name,'time':i.days,'price':int(narx),
                     'logo': i.company_logo.url,
                     'type': i.company_type,
                     }
@@ -80,7 +80,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==3:
             data=[]
@@ -91,7 +91,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==4:
             data=[]
@@ -102,7 +102,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==5:
             data=[]
@@ -113,7 +113,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==6:
             data=[]
@@ -125,7 +125,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==7:
             data=[]
@@ -136,7 +136,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==8:
             data=[]
@@ -147,7 +147,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==9:
             data=[]
@@ -158,7 +158,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==10:
             data=[]
@@ -169,7 +169,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==11:
             data=[]
@@ -180,7 +180,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==12:
             data=[]
@@ -192,7 +192,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==13:
             data=[]
@@ -203,7 +203,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==14:
             data=[]
@@ -214,7 +214,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==15:
             data=[]
@@ -225,7 +225,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==16:
             data=[]
@@ -236,7 +236,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==17:
             data=[]
@@ -247,7 +247,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==18:
             data=[]
@@ -258,7 +258,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==19:
             data=[]
@@ -269,7 +269,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if kg==20:
             data=[]
@@ -280,7 +280,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if  20<kg<45:
             data=[]
@@ -292,7 +292,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if  44<kg<71:
             data=[]
@@ -304,7 +304,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if  70<kg<101:
             data=[]
@@ -316,7 +316,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if  100<kg<300:
             data=[]
@@ -328,7 +328,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         if  299<kg:
             data=[]
@@ -340,7 +340,7 @@ def CompanySendFunc(request):
                 a ={'name':i.company_name,
                     'logo': i.company_logo.url,
                     'type': i.company_type,
-                    'time':i.days,'price':narx}
+                    'time':i.days,'price':int(narx)}
                 data.append(a)
         return JsonResponse({'data': data})
 
