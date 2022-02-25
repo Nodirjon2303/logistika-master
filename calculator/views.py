@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import *
 import json
 from django.http import JsonResponse
-
+from django.contrib.auth import authenticate, login
 import requests
 
 # Create your views here.
@@ -12,10 +12,16 @@ import requests
 def CalculatorPageView(request):
     DATA=Country.objects.all()
     add_inform = AdditionalInformation.objects.first()
+    if request.user.username == '':
+        user = authenticate(request, username='user', password='userpass')
+        print(user)
+        if user:
+            login(request, user=user)
     return render(request=request,template_name='index.html', context={"country":DATA, "addition": add_inform})
 
 def CompanySendFunc(request):
     if request.method == 'POST':
+
         data = json.loads(request.body)
         kg=(data['weight'])
         comp=Company.objects.all()
