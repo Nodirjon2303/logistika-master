@@ -272,7 +272,6 @@
 <script>
     function weight_data() {
         country = document.getElementById(`country_id1`).value
-        higher_weight = 35
         const csrftoken = getCookie('csrftoken');
         var url = `company/`
         fetch(url, {
@@ -304,10 +303,10 @@
                                                                                         <td style="width:18% !important;">${data[i].name} </td>
                                                                                         <td style="width:18% !important;">${data[i].type}</td>
                                                                                         <td style="width:18% !important;">${data[i].time}</td>
-                                                                                        <td style="width:18% !important;">
-                                                                                                <div >
-                                                                                                        <button style="padding:0 !important;min-width: auto !important;  border: 1px solid black !important;  background-color: red; !important;" onclick='d2("${data[i].name}", ${data[i].price})' >${data[i].price} $</button> </div>
-                                                                                                        </td> </tr>`
+                                                                                        <td style="width:18% !important;">${data[i].price} $</td>
+                                                                                        <td style="width:18% background-color: deepskyblue; !important;"><button style="padding:0 !important;min-width: auto !important;  border: 3px solid red !important;   !important;" onclick='d2("${data[i].name}", ${data[i].price})' >Submit</button>
+                                                                                                </td> </tr>`
+
                     }
                     html2 = `<style>
                                                                 table {
