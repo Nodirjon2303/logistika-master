@@ -273,6 +273,7 @@
     function weight_data() {
         country = document.getElementById(`country_id1`).value
         higher_weight = 35
+        const csrftoken = getCookie('csrftoken');
         var url = `company/`
         fetch(url, {
             method: 'POST',
