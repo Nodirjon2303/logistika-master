@@ -494,40 +494,8 @@
                                                         <div id="companies">
 
                                                         </div>
-                                                        <div id="3div" hidden>
-                                                            <div><b>
-                                                                    <p> <label for="fname">First name:</label>
-                                                                        <input type="text" style='font-size:14pt'
-                                                                            id="fname" name="fname">
-                                                                    </p>
-                                                                    <p> <label for="lname">Last name:</label>
-                                                                        <input type="text" style='font-size:14pt'
-                                                                            id="lname" name="lname">
-                                                                    </p>
-                                                                    <p> <label for="fname">Email:</label>
-                                                                        <input type="email" style='font-size:14pt'
-                                                                            id="email" name="email">
-                                                                    </p>
-                                                                    <p><label for="phone">Enter your phone
-                                                                            number:</label>
-                                                                        <input type="tel" style='font-size:14pt'
-                                                                            id="phone" name="phone"
-                                                                            pattern="[+]{1}+[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
-                                                                    </p>
-                                                                    <p><textarea id="message" rows="1" cols="50"
-                                                                            name="comment"
-                                                                            placeholder="Enter text here..."
-                                                                            style='font-size:14pt'></textarea></p>
-                                                                </b>
-                                                            </div>
-                                                            <p id="text13" style="text-align:center;">....</p>
-                                                            <div class="col-lg-4">
-                                                                <div>
-                                                                    <button type="button" id="submit" onclick="check()"
-                                                                        class="btn btn-primary">Tasdiqlash<i
-                                                                            class="las la-arrow-right"></i></button>
-                                                                </div>
-                                                            </div>
+                                                        <div style="margin-top: 35px" id="3div">
+
                                                         </div>
                                                         <script>
                                                             function check() {
@@ -567,8 +535,41 @@
                                                         <script>
                                                             function d2(name, price) {
                                                                 {#document.getElementById("2div").hidden = !document.getElementById("2div").hidden;#}
-                                                                document.getElementById('companies').innerHTML = ''
-                                                                document.getElementById("3div").hidden = !document.getElementById("3div").hidden;
+                                                                document.getElementById('3div').innerHTML = `<div><b>
+                                                                    <p> <label for="fname">First name:</label>
+                                                                        <input type="text" style='font-size:14pt'
+                                                                            id="fname" name="fname">
+                                                                    </p>
+                                                                    <p> <label for="lname">Last name:</label>
+                                                                        <input type="text" style='font-size:14pt'
+                                                                            id="lname" name="lname">
+                                                                    </p>
+                                                                    <p> <label for="fname">Email:</label>
+                                                                        <input type="email" style='font-size:14pt'
+                                                                            id="email" name="email">
+                                                                    </p>
+                                                                    <p><label for="phone">Enter your phone
+                                                                            number:</label>
+                                                                        <input type="tel" style='font-size:14pt'
+                                                                            id="phone" name="phone"
+                                                                            pattern="[+]{1}+[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                                                                    </p>
+                                                                    <p><textarea id="message" rows="1" cols="50"
+                                                                            name="comment"
+                                                                            placeholder="Enter text here..."
+                                                                            style='font-size:14pt'></textarea></p>
+                                                                </b>
+                                                            </div>
+                                                            <p id="text13" style="text-align:center;">....</p>
+                                                            <div class="col-lg-4">
+                                                                <div>
+                                                                    <button type="button" id="submit" onclick="check()"
+                                                                        class="btn btn-primary">Tasdiqlash<i
+                                                                            class="las la-arrow-right"></i></button>
+                                                                </div>
+                                                            </div>`
+                                                                {#document.getElementById("3div").hidden = !document.getElementById("3div").hidden;#}
+
                                                                 document.getElementById("saqla").innerHTML = `<p id="company_name">Courier:  "${name}"</p>
                                                                                                                 <div id="company_price">Rate:  ${price} $</div>
                                                                                                                 `
@@ -631,7 +632,7 @@
                                                             <table id="tr" style=" display: inline-block !important; ">
                                                             `
                                                                             html2+=html
-                                                                            document.getElementById('companies').innerHTML = html2
+                                                                            document.getElementById('3div').innerHTML = html2
                                                                             //
                                                                         })
                                                                     })
